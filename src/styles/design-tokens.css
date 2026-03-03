@@ -1,0 +1,512 @@
+/**
+ * Design Tokens
+ * Auto-generated from Figma - DO NOT EDIT MANUALLY
+ *
+ * Usage: Import this file at the root of your application
+ * All components should reference these variables instead of hardcoded values
+ *
+ * Theming: Apply data-theme="light" or data-theme="dark" to a wrapper element
+ * Default (no attribute) uses light theme
+ */
+
+:root,
+[data-theme="light"] {
+  /* ============================================
+     SPACING (4px grid)
+     ============================================ */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+
+  /* ============================================
+     BORDER
+     ============================================ */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 6px;
+
+  /* ============================================
+     RADIUS
+     ============================================ */
+  --radius-0: 0px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 8px;
+  --radius-4: 12px;
+  --radius-5: 16px;
+  --radius-6: 24px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     MAX WIDTH
+     ============================================ */
+  --max-width-xs: 320px;
+  --max-width-mobile: 328px;
+  --max-width-sidebar: 350px;
+  --max-width-form: 344px;
+  --max-width-sm: 480px;
+  --max-width-md: 640px;
+  --max-width-content: 720px;
+  --max-width-lg: 800px;
+  --max-width-xl: 1024px;
+  --max-width-2xl: 1280px;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-card: 0px 4px 12px 0px rgba(0, 48, 77, 0.08);
+
+  /* ============================================
+     FOCUS RING
+     ============================================ */
+  --focus-ring-width: 3px;
+
+  /* ============================================
+     FONT FAMILIES
+     ============================================ */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Libre Caslon Text', serif;
+
+  /* ============================================
+     FONT WEIGHTS
+     ============================================ */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     COLORS - Surface
+     ============================================ */
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #F4F4F4;
+  --color-surface-tertiary: #222222;
+
+  /* ============================================
+     COLORS - Typography
+     ============================================ */
+  --color-type-primary: #333333;
+  --color-type-secondary: #666666;
+  --color-type-tertiary: #FFFFFF;
+  --color-type-link-default: #1853AC;
+  --color-type-link-hover: #00304D;
+  --color-type-link-visited: #5128C3;
+
+  /* ============================================
+     COLORS - Accent
+     ============================================ */
+  --color-accent-blue: #256FDD;
+  --color-accent-green: #159382;
+  --color-accent-yellow: #FFF646;
+  --color-accent-orange: #EAAC1D;
+  --color-accent-red: #EC2222;
+  --color-accent-white: #FFFFFF;
+
+  /* ============================================
+     COLORS - Button Primary
+     ============================================ */
+  --color-button-primary-default: #222222;
+  --color-button-primary-hover: #000000;
+  --color-button-primary-label: #FFFFFF;
+
+  /* ============================================
+     COLORS - Button Secondary
+     ============================================ */
+  --color-button-secondary-default: #FFFFFF;
+  --color-button-secondary-hover: #DADADA;
+  --color-button-secondary-label: #333333;
+
+  /* ============================================
+     COLORS - Overlay
+     ============================================ */
+  --color-overlay-dark: rgba(0, 0, 0, 0.5);
+
+  /* ============================================
+     TYPOGRAPHY - Desktop (default)
+     ============================================ */
+
+  /* Heading H1 */
+  --heading-h1-font-family: var(--font-primary);
+  --heading-h1-font-weight: var(--font-weight-semibold);
+  --heading-h1-font-size: 72px;
+  --heading-h1-line-height: 80px;
+  --heading-h1-font-size-desktop: 72px;
+  --heading-h1-line-height-desktop: 80px;
+  --heading-h1-font-size-mobile: 42px;
+  --heading-h1-line-height-mobile: 56px;
+
+  /* Heading H2 */
+  --heading-h2-font-family: var(--font-primary);
+  --heading-h2-font-weight: var(--font-weight-semibold);
+  --heading-h2-font-size: 64px;
+  --heading-h2-line-height: 80px;
+  --heading-h2-font-size-desktop: 64px;
+  --heading-h2-line-height-desktop: 80px;
+  --heading-h2-font-size-mobile: 32px;
+  --heading-h2-line-height-mobile: 48px;
+
+  /* Heading H3 */
+  --heading-h3-font-family: var(--font-primary);
+  --heading-h3-font-weight: var(--font-weight-semibold);
+  --heading-h3-font-size: 44px;
+  --heading-h3-line-height: 56px;
+  --heading-h3-font-size-desktop: 44px;
+  --heading-h3-line-height-desktop: 56px;
+  --heading-h3-font-size-mobile: 28px;
+  --heading-h3-line-height-mobile: 40px;
+
+  /* Heading H4 */
+  --heading-h4-font-family: var(--font-primary);
+  --heading-h4-font-weight: var(--font-weight-semibold);
+  --heading-h4-font-size: 28px;
+  --heading-h4-line-height: 40px;
+  --heading-h4-font-size-desktop: 28px;
+  --heading-h4-line-height-desktop: 40px;
+  --heading-h4-font-size-mobile: 24px;
+  --heading-h4-line-height-mobile: 32px;
+
+  /* Heading H5 */
+  --heading-h5-font-family: var(--font-primary);
+  --heading-h5-font-weight: var(--font-weight-semibold);
+  --heading-h5-font-size: 22px;
+  --heading-h5-line-height: 32px;
+  --heading-h5-font-size-desktop: 22px;
+  --heading-h5-font-size-mobile: 20px;
+
+  /* Heading H6 */
+  --heading-h6-font-family: var(--font-primary);
+  --heading-h6-font-weight: var(--font-weight-semibold);
+  --heading-h6-font-size: 18px;
+  --heading-h6-line-height: 24px;
+  --heading-h6-font-size-desktop: 18px;
+  --heading-h6-font-size-mobile: 16px;
+
+  /* Body Lead */
+  --body-lead-font-family: var(--font-primary);
+  --body-lead-font-weight: var(--font-weight-semibold);
+  --body-lead-font-size: 22px;
+  --body-lead-line-height: 32px;
+  --body-lead-font-size-desktop: 22px;
+  --body-lead-font-size-mobile: 18px;
+
+  /* Body Large - Desktop */
+  --body-large-font-family: var(--font-primary);
+  --body-large-font-weight: var(--font-weight-regular);
+  --body-large-font-size: 18px;
+  --body-large-line-height: 32px;
+  --body-large-font-size-desktop: 18px;
+  --body-large-font-size-mobile: 16px;
+
+  /* Body Medium */
+  --body-medium-font-family: var(--font-primary);
+  --body-medium-font-weight: var(--font-weight-regular);
+  --body-medium-font-size: 16px;
+  --body-medium-line-height: 28px;
+  --body-medium-font-size-desktop: 16px;
+  --body-medium-font-size-mobile: 15px;
+
+  /* Body Small */
+  --body-small-font-family: var(--font-primary);
+  --body-small-font-weight: var(--font-weight-regular);
+  --body-small-font-size: 14px;
+  --body-small-line-height: 24px;
+  --body-small-font-size-desktop: 14px;
+  --body-small-font-size-mobile: 14px;
+
+  /* Body Quote */
+  --body-quote-font-family: var(--font-secondary);
+  --body-quote-font-weight: var(--font-weight-regular);
+  --body-quote-font-size: 28px;
+  --body-quote-line-height: 48px;
+  --body-quote-font-size-desktop: 28px;
+  --body-quote-line-height-desktop: 48px;
+  --body-quote-font-size-mobile: 20px;
+  --body-quote-line-height-mobile: 32px;
+
+  /* Body Link Large */
+  --body-link-large-font-family: var(--font-primary);
+  --body-link-large-font-weight: var(--font-weight-regular);
+  --body-link-large-font-size: 18px;
+  --body-link-large-line-height: 32px;
+  --body-link-large-font-size-desktop: 18px;
+  --body-link-large-font-size-mobile: 16px;
+
+  /* Body Link Medium */
+  --body-link-medium-font-family: var(--font-primary);
+  --body-link-medium-font-weight: var(--font-weight-regular);
+  --body-link-medium-font-size: 16px;
+  --body-link-medium-line-height: 28px;
+
+  /* Body Link Small */
+  --body-link-small-font-family: var(--font-primary);
+  --body-link-small-font-weight: var(--font-weight-regular);
+  --body-link-small-font-size: 14px;
+  --body-link-small-line-height: 24px;
+}
+
+/* ============================================
+   TYPOGRAPHY - Mobile Overrides
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    /* Heading H1 */
+    --heading-h1-font-size: 42px;
+    --heading-h1-line-height: 56px;
+
+    /* Heading H2 */
+    --heading-h2-font-size: 32px;
+    --heading-h2-line-height: 48px;
+
+    /* Heading H3 */
+    --heading-h3-font-size: 28px;
+    --heading-h3-line-height: 40px;
+
+    /* Heading H4 */
+    --heading-h4-font-size: 24px;
+    --heading-h4-line-height: 32px;
+
+    /* Heading H5 */
+    --heading-h5-font-size: 20px;
+    --heading-h5-line-height: 32px;
+
+    /* Heading H6 - same as desktop */
+    --heading-h6-font-size: 18px;
+    --heading-h6-line-height: 24px;
+
+    /* Body Lead */
+    --body-lead-font-size: 18px;
+    --body-lead-line-height: 32px;
+
+    /* Body Quote */
+    --body-quote-font-size: 20px;
+    --body-quote-line-height: 32px;
+
+    /* Body Large */
+    --body-large-font-size: 16px;
+    --body-large-line-height: 32px;
+
+    /* Body Medium */
+    --body-medium-font-size: 17px;
+    --body-medium-line-height: 28px;
+
+    /* Body Small - same as desktop */
+    --body-small-font-size: 14px;
+    --body-small-line-height: 24px;
+
+    /* Body Link Large */
+    --body-link-large-font-size: 16px;
+    --body-link-large-line-height: 32px;
+
+    /* Body Link Medium */
+    --body-link-medium-font-size: 17px;
+    --body-link-medium-line-height: 28px;
+
+    /* Body Link Small - same as desktop */
+    --body-link-small-font-size: 14px;
+    --body-link-small-line-height: 24px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES (Optional)
+   ============================================ */
+
+/* Headings */
+.heading-h1 {
+  font-family: var(--heading-h1-font-family);
+  font-weight: var(--heading-h1-font-weight);
+  font-size: var(--heading-h1-font-size);
+  line-height: var(--heading-h1-line-height);
+  color: var(--color-type-primary);
+}
+
+.heading-h2 {
+  font-family: var(--heading-h2-font-family);
+  font-weight: var(--heading-h2-font-weight);
+  font-size: var(--heading-h2-font-size);
+  line-height: var(--heading-h2-line-height);
+  color: var(--color-type-primary);
+}
+
+.heading-h3 {
+  font-family: var(--heading-h3-font-family);
+  font-weight: var(--heading-h3-font-weight);
+  font-size: var(--heading-h3-font-size);
+  line-height: var(--heading-h3-line-height);
+  color: var(--color-type-primary);
+}
+
+.heading-h4 {
+  font-family: var(--heading-h4-font-family);
+  font-weight: var(--heading-h4-font-weight);
+  font-size: var(--heading-h4-font-size);
+  line-height: var(--heading-h4-line-height);
+  color: var(--color-type-primary);
+}
+
+.heading-h5 {
+  font-family: var(--heading-h5-font-family);
+  font-weight: var(--heading-h5-font-weight);
+  font-size: var(--heading-h5-font-size);
+  line-height: var(--heading-h5-line-height);
+  color: var(--color-type-primary);
+}
+
+.heading-h6 {
+  font-family: var(--heading-h6-font-family);
+  font-weight: var(--heading-h6-font-weight);
+  font-size: var(--heading-h6-font-size);
+  line-height: var(--heading-h6-line-height);
+  color: var(--color-type-primary);
+}
+
+/* Body Text */
+.body-lead {
+  font-family: var(--body-lead-font-family);
+  font-weight: var(--body-lead-font-weight);
+  font-size: var(--body-lead-font-size);
+  line-height: var(--body-lead-line-height);
+  color: var(--color-type-primary);
+}
+
+.body-quote {
+  font-family: var(--body-quote-font-family);
+  font-weight: var(--body-quote-font-weight);
+  font-size: var(--body-quote-font-size);
+  line-height: var(--body-quote-line-height);
+  color: var(--color-type-primary);
+}
+
+.body-large {
+  font-family: var(--body-large-font-family);
+  font-weight: var(--body-large-font-weight);
+  font-size: var(--body-large-font-size);
+  line-height: var(--body-large-line-height);
+  color: var(--color-type-primary);
+}
+
+.body-medium {
+  font-family: var(--body-medium-font-family);
+  font-weight: var(--body-medium-font-weight);
+  font-size: var(--body-medium-font-size);
+  line-height: var(--body-medium-line-height);
+  color: var(--color-type-primary);
+}
+
+.body-small {
+  font-family: var(--body-small-font-family);
+  font-weight: var(--body-small-font-weight);
+  font-size: var(--body-small-font-size);
+  line-height: var(--body-small-line-height);
+  color: var(--color-type-primary);
+}
+
+/* Links */
+.body-link-large {
+  font-family: var(--body-link-large-font-family);
+  font-weight: var(--body-link-large-font-weight);
+  font-size: var(--body-link-large-font-size);
+  line-height: var(--body-link-large-line-height);
+  color: var(--color-type-link-default);
+  text-decoration: underline;
+}
+
+.body-link-large:hover {
+  color: var(--color-type-link-hover);
+}
+
+.body-link-large:visited {
+  color: var(--color-type-link-visited);
+}
+
+.body-link-medium {
+  font-family: var(--body-link-medium-font-family);
+  font-weight: var(--body-link-medium-font-weight);
+  font-size: var(--body-link-medium-font-size);
+  line-height: var(--body-link-medium-line-height);
+  color: var(--color-type-link-default);
+  text-decoration: underline;
+}
+
+.body-link-medium:hover {
+  color: var(--color-type-link-hover);
+}
+
+.body-link-medium:visited {
+  color: var(--color-type-link-visited);
+}
+
+.body-link-small {
+  font-family: var(--body-link-small-font-family);
+  font-weight: var(--body-link-small-font-weight);
+  font-size: var(--body-link-small-font-size);
+  line-height: var(--body-link-small-line-height);
+  color: var(--color-type-link-default);
+  text-decoration: underline;
+}
+
+.body-link-small:hover {
+  color: var(--color-type-link-hover);
+}
+
+.body-link-small:visited {
+  color: var(--color-type-link-visited);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-button-primary-default);
+  color: var(--color-button-primary-label);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-button-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-button-secondary-default);
+  color: var(--color-button-secondary-label);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+/* Surface Colors */
+.surface-primary {
+  background-color: var(--color-surface-primary);
+}
+
+.surface-secondary {
+  background-color: var(--color-surface-secondary);
+}
+
+.surface-tertiary {
+  background-color: var(--color-surface-tertiary);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-type-primary);
+}
+
+.text-secondary {
+  color: var(--color-type-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-type-tertiary);
+}

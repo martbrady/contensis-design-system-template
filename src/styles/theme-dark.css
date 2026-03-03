@@ -1,0 +1,53 @@
+/**
+ * Dark Theme Token Overrides
+ * Generated from Figma Dark mode tokens
+ *
+ * Usage: Apply data-theme="dark" attribute to a wrapper element
+ * All components automatically adapt via CSS variable overrides
+ */
+
+[data-theme="dark"] {
+  /* ============================================
+     COLORS - Surface (Dark)
+     ============================================ */
+  --color-surface-primary: #222222;
+  --color-surface-secondary: #383838;
+  --color-surface-tertiary: #FFFFFF;
+
+  /* ============================================
+     COLORS - Typography (Dark)
+     ============================================ */
+  --color-type-primary: #FFFFFF;
+  --color-type-secondary: #ABABAB;
+  --color-type-tertiary: #333333;
+  --color-type-link-default: #6DE7FF;
+  --color-type-link-hover: #D4F8FF;
+  --color-type-link-visited: #B59AFF;
+
+  /* ============================================
+     COLORS - Accent (Dark)
+     Note: Most accent colors remain the same
+     ============================================ */
+  --color-accent-blue: #256FDD;
+  --color-accent-green: #159382;
+  --color-accent-yellow: #FFF646;
+  --color-accent-orange: #EAAC1D;
+  --color-accent-red: #EC2222;
+  --color-accent-white: #FFFFFF;
+
+  /* ============================================
+     COLORS - Button Primary (Dark)
+     Inverted from light theme
+     ============================================ */
+  --color-button-primary-default: #FFFFFF;
+  --color-button-primary-hover: #DADADA;
+  --color-button-primary-label: #333333;
+
+  /* ============================================
+     COLORS - Button Secondary (Dark)
+     Inverted from light theme
+     ============================================ */
+  --color-button-secondary-default: #222222;
+  --color-button-secondary-hover: #000000;
+  --color-button-secondary-label: #FFFFFF;
+}
