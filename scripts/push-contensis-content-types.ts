@@ -55,21 +55,30 @@ const CONTENT_TYPES: any[] = [
   //
   // ----- CANVAS FIELD GUIDELINE -----
   // When a content type has a canvas field, restrict allowed components to
-  // only those that make sense as standalone canvas blocks. The pattern below
-  // is taken from the vanilla design system's Article content type and shows
-  // which component IDs to include/exclude.
+  // only those that make sense as standalone canvas blocks.
+  //
+  // Many components are standardised across projects — their IDs are
+  // consistent and can be copied directly. Project-specific components
+  // (those built for a particular site) should be added alongside them.
   //
   // Rules:
-  //   INCLUDE  — top-level content components (accordion, canvasCardBlock, etc.)
-  //   EXCLUDE  — child components (card, stat, list, relatedLinkCard — these
-  //              are always nested inside a parent block, never placed directly
-  //              in canvas)
-  //   EXCLUDE  — page-level components (hero — belongs in a page template,
-  //              not inline canvas)
-  //   EXCLUDE  — sidebar/column components (relatedLinks — layout component,
-  //              not inline canvas content)
-  //   EXCLUDE  — meta/system components (metaComponent — belongs in a
+  //   INCLUDE  — top-level content components (standalone blocks an editor
+  //              can place directly in the canvas)
+  //   EXCLUDE  — child components (e.g. card, stat — always nested inside a
+  //              parent block such as canvasCardBlock or statBlock)
+  //   EXCLUDE  — page-level components (e.g. hero — belongs in a page
+  //              template, not inline canvas content)
+  //   EXCLUDE  — sidebar/column components (e.g. relatedLinks — layout
+  //              component, not inline canvas content)
+  //   EXCLUDE  — meta/system components (e.g. metaComponent — belongs in a
   //              dedicated meta field, not canvas content)
+  //
+  // Standardised component IDs (present in most projects):
+  //   accordion, asset, button, canvasBanner, canvasCardBlock, ctaBanner,
+  //   featuredlist, gallery, imageBlock, statBlock, tabbedContent, videoBlock
+  //
+  // Project-specific component IDs (add as needed per project):
+  //   authorDetails, composableCardBlock, relatedLinks, hero, etc.
   //
   // Example canvas field validations:
   //
@@ -93,19 +102,23 @@ const CONTENT_TYPES: any[] = [
   //           type: '_component',
   //           components: {
   //             allowed: [
-  //               'accordion',       // ✓ standalone block
-  //               'asset',           // ✓ standalone block
-  //               'authorDetails',   // ✓ standalone block
-  //               'button',          // ✓ standalone block
-  //               'canvasBanner',    // ✓ standalone block
-  //               'canvasCardBlock', // ✓ standalone block (card is a child — excluded)
-  //               'ctaBanner',       // ✓ standalone block
-  //               'featuredlist',    // ✓ standalone block
-  //               'gallery',         // ✓ standalone block
-  //               'imageBlock',      // ✓ standalone block
-  //               'statBlock',       // ✓ standalone block (stat is a child — excluded)
-  //               'tabbedContent',   // ✓ standalone block
-  //               'videoBlock',      // ✓ standalone block
+  //               // ---- Standardised (include in most projects) ----
+  //               'accordion',        // ✓ standalone block
+  //               'asset',            // ✓ standalone block
+  //               'button',           // ✓ standalone block
+  //               'canvasBanner',     // ✓ standalone block
+  //               'canvasCardBlock',  // ✓ standalone block (card is a child — excluded)
+  //               'ctaBanner',        // ✓ standalone block
+  //               'featuredlist',     // ✓ standalone block
+  //               'gallery',          // ✓ standalone block
+  //               'imageBlock',       // ✓ standalone block
+  //               'statBlock',        // ✓ standalone block (stat is a child — excluded)
+  //               'tabbedContent',    // ✓ standalone block
+  //               'videoBlock',       // ✓ standalone block
+  //               // ---- Project-specific (add per project as needed) ----
+  //               // 'authorDetails',
+  //               // 'composableCardBlock',
+  //               // 'myCustomBlock',
   //             ],
   //           },
   //         },
