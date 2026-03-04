@@ -1,9 +1,15 @@
 name: Chromatic
 
+# Disabled by default in this template — no CHROMATIC_PROJECT_TOKEN is configured here.
+# When creating a new project from this template:
+#   1. Set up a Chromatic project at https://www.chromatic.com
+#   2. Add CHROMATIC_PROJECT_TOKEN to your repository secrets
+#   3. Uncomment the push trigger below to enable automatic builds on main
+
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
