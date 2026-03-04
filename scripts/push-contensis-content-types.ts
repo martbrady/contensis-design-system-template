@@ -128,6 +128,65 @@ const CONTENT_TYPES: any[] = [
   //   editor: null,
   //   groupId: 'content',
   // },
+  //
+  // ----- COMPOSER FIELD GUIDELINE -----
+  // Canvas and Composer serve different authoring purposes — they are not
+  // interchangeable or versions of the same thing:
+  //
+  //   CANVAS   — long-form document builder for information pages (articles,
+  //              news, editorial). Editors flow rich text, media and component
+  //              embeds inline. Use dataFormat: 'canvas'.
+  //
+  //   COMPOSER — page assembly tool for landing pages and homepages. Editors
+  //              pick from a set of pre-defined full-width blocks/patterns to
+  //              build a structured layout. Use dataFormat: 'field' with
+  //              allowedFieldTypes listing each available block.
+  //
+  // Use Canvas when the page is document-like (article body, policy page).
+  // Use Composer when the page is built from discrete layout sections
+  // (homepage, campaign landing page, section landing page).
+  //
+  // Composer blocks are project-specific — each project defines its own
+  // set. However the structural pattern is standardised:
+  //
+  // {
+  //   id: 'composer',
+  //   name: { 'en-GB': 'Composer' },
+  //   dataType: 'objectArray',
+  //   dataFormat: 'field',
+  //   description: {},
+  //   default: null,
+  //   validations: {
+  //     allowedFieldTypes: {
+  //       fields: [
+  //         // Each entry here is a full-width layout block editors can add.
+  //         // Define as many block types as the project requires.
+  //         // Each block has its own id, dataFormat (component.*) and fields.
+  //         //
+  //         // Example — a card row block:
+  //         // {
+  //         //   id: 'cardRow',
+  //         //   name: { 'en-GB': 'Card row' },
+  //         //   dataType: 'object',
+  //         //   dataFormat: 'component.cardrow',
+  //         //   description: {},
+  //         //   default: null,
+  //         //   validations: {},
+  //         //   editor: { id: 'component', instructions: {}, label: {}, properties: null },
+  //         //   fields: [
+  //         //     // child fields for the card row block...
+  //         //   ],
+  //         // },
+  //         //
+  //         // Tip: keep composer blocks focused on layout/structure.
+  //         // Rich text within a block should use a canvas sub-field, not
+  //         // be placed directly in the composer.
+  //       ],
+  //     },
+  //   },
+  //   editor: null,
+  //   groupId: 'main',
+  // },
 ];
 
 /**
