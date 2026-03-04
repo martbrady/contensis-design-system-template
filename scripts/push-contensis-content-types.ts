@@ -52,6 +52,69 @@ const CMS_ONLY_COMPONENTS: any[] = [
 const CONTENT_TYPES: any[] = [
   // Add content type definitions here.
   // e.g. Person, Category, Article
+  //
+  // ----- CANVAS FIELD GUIDELINE -----
+  // When a content type has a canvas field, restrict allowed components to
+  // only those that make sense as standalone canvas blocks. The pattern below
+  // is taken from the vanilla design system's Article content type and shows
+  // which component IDs to include/exclude.
+  //
+  // Rules:
+  //   INCLUDE  — top-level content components (accordion, canvasCardBlock, etc.)
+  //   EXCLUDE  — child components (card, stat, list, relatedLinkCard — these
+  //              are always nested inside a parent block, never placed directly
+  //              in canvas)
+  //   EXCLUDE  — page-level components (hero — belongs in a page template,
+  //              not inline canvas)
+  //   EXCLUDE  — sidebar/column components (relatedLinks — layout component,
+  //              not inline canvas content)
+  //   EXCLUDE  — meta/system components (metaComponent — belongs in a
+  //              dedicated meta field, not canvas content)
+  //
+  // Example canvas field validations:
+  //
+  // {
+  //   id: 'canvas',
+  //   name: { 'en-GB': 'Canvas' },
+  //   dataType: 'objectArray',
+  //   dataFormat: 'canvas',
+  //   description: {},
+  //   default: null,
+  //   validations: {
+  //     allowedTypes: {
+  //       message: null,
+  //       types: [
+  //         { type: '*' },
+  //         {
+  //           type: '_fragment',
+  //           decorators: { allowed: [{ decorator: '*' }] },
+  //         },
+  //         {
+  //           type: '_component',
+  //           components: {
+  //             allowed: [
+  //               'accordion',       // ✓ standalone block
+  //               'asset',           // ✓ standalone block
+  //               'authorDetails',   // ✓ standalone block
+  //               'button',          // ✓ standalone block
+  //               'canvasBanner',    // ✓ standalone block
+  //               'canvasCardBlock', // ✓ standalone block (card is a child — excluded)
+  //               'ctaBanner',       // ✓ standalone block
+  //               'featuredlist',    // ✓ standalone block
+  //               'gallery',         // ✓ standalone block
+  //               'imageBlock',      // ✓ standalone block
+  //               'statBlock',       // ✓ standalone block (stat is a child — excluded)
+  //               'tabbedContent',   // ✓ standalone block
+  //               'videoBlock',      // ✓ standalone block
+  //             ],
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   },
+  //   editor: null,
+  //   groupId: 'content',
+  // },
 ];
 
 /**
